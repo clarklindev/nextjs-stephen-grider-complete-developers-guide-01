@@ -150,3 +150,12 @@ export default function Header() {
     );
 }
 ```
+
+## 09. Absolute path import shortcut
+
+-   instead of using relative path imports
+-   nextjs has alias which uses absolute path from `src` directory
+
+```jsx
+import Header from '@/components/Header';
+```
