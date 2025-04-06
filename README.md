@@ -119,3 +119,34 @@ export default function RootLayout({
     );
 }
 ```
+
+## 08 project structure strategy
+
+-   dont bloat layout.tsx
+-   extract to its own file
+-   but dont put in app/ since this folder has routes
+
+<img
+src='exercise_files/08-project-folder-structure.png'
+alt='08-project-folder-structure.png'
+width=600
+/>
+
+-   extract the header to its own file (outside the app/ folder)
+-   in src/app/layout.tsx import the header
+
+```tsx
+//src/components/header.tsx
+import Link from 'next/link';
+
+export default function Header() {
+    return (
+        <div>
+            <Link href="/">Home</Link>
+            <Link href="/performance">performance</Link>
+            <Link href="/reliability">reliability</Link>
+            <Link href="/scale">scale</Link>
+        </div>
+    );
+}
+```
