@@ -196,3 +196,14 @@ export default function Home() {
     );
 }
 ```
+
+## 12. More on the Image Component
+
+-   `<Image>` component solves `layout shifting`
+-   placeholder needs to know its size (width/height) 3 options:
+
+    -   local image (public/) -> get dimensions from imported image
+    -   asign width/height as props (sets defined dimensions)
+    -   use `fill` prop
+
+<img src='exercise_files/12-options-for-sizing-image.png' alt='12-options-for-sizing-image.png' width=600 />
