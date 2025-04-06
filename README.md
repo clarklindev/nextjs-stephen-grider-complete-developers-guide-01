@@ -2,6 +2,14 @@ https://www.udemy.com/course/next-js-the-complete-developers-guide/
 
 -   Stephen Grider - Complete Developers Guide
 
+# Section 01 - getting started
+
+# Section 02 - Changing Data with Mutations
+
+---
+
+# Section 01 - getting started
+
 ## 03. Project Overview
 
 ```sh
@@ -235,3 +243,56 @@ export default function Hero(props: HeroProps) {
     );
 }
 ```
+
+## 14. Nav styles - Adding Some Styling
+
+```tsx
+//src/components/header.tsx
+import Link from 'next/link';
+
+export default function Header() {
+    return (
+        <div className="w-full absolute text-white z-10">
+            <nav className="container relative flex flex-wrap items-center justify-between mx-auto p-8">
+                <Link href="/" className="font-bold text-3xl">
+                    Home
+                </Link>
+                <div className="space-x-4 text-xl">
+                    <Link href="/performance">performance</Link>
+                    <Link href="/reliability">reliability</Link>
+                    <Link href="/scale">scale</Link>
+                </div>
+            </nav>
+        </div>
+    );
+}
+```
+
+## 15. production deployment
+
+-   deploy to vercel
+
+```sh
+npx vercel
+```
+
+```sh
+Log in to Vercel Continue with GitHub
+> Success! GitHub authentication complete for: 'email'
+? Set up and deploy “~\Downloads\code\nextjs\nextjs-stephen-grider-complete-developers-guide”? yes
+? Which scope should contain your project? clarklindev
+? Link to existing project? no
+? What’s your project’s name? nextjs-stephen-grider-complete-developers-guide
+? In which directory is your code located? ./
+Local settings detected in vercel.json:
+Auto-detected Project Settings (Next.js):
+- Build Command: next build
+- Development Command: next dev --port $PORT
+- Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+- Output Directory: Next.js default
+? Want to modify these settings? no
+```
+
+---
+
+# Section 2 - Changing Data with Mutations
