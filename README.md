@@ -159,3 +159,40 @@ export default function Header() {
 ```jsx
 import Header from '@/components/Header';
 ```
+
+## 10. working with images
+
+-   download images.zip
+-   NOTE: on the lesson, they import with `public` keyword along static images
+-   but after nextjs v14.2 of Next or higher, update `tsconfig.json`
+
+```json
+// tsconfig.json
+"paths": {
+    "@/*": ["./src/*"],
+    "public/*": ["./public/*"]
+}
+```
+
+## 11. adding images in nextjs
+
+### local images
+
+-   extract images.zip to `public/`
+-   instead of using `<img>` tags
+-   nextjs has `<Image>` component
+-   `<Image/>` automatic image optimization
+
+```tsx
+//src/page.tsx
+import Image from 'next/image';
+import homeImg from 'public/home.jpg';
+
+export default function Home() {
+    return (
+        <div className="absolute -z-10 inset-0">
+            <Image alt="car factory" src={homeImg} fill style={{ objectFit: 'cover' }} />
+        </div>
+    );
+}
+```
